@@ -11,7 +11,7 @@ import (
 	"gopkg.in/ini.v1"
 )
 
-func Stroe(id string, tc interface{}, expire time.Duration) error {
+func Store(id string, tc interface{}, expire time.Duration) error {
 
 	// 反射值和类型
 	tcValue := reflect.ValueOf(tc).Elem()
