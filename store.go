@@ -33,7 +33,7 @@ func Store(id string, tc interface{}, expire time.Duration) error {
 		}
 	}
 	// 设置过期时间
-	err = redisClient.Expire(context.Background(), id, time.Second*expire).Err()
+	err = redisClient.Expire(context.Background(), id, expire).Err()
 	if err != nil {
 		return errors.Wrap(err, "redis set expire err")
 	}
